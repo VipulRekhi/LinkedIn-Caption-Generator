@@ -1,9 +1,21 @@
 import express from "express";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
+import pg from "pg";
 import { GoogleGenAI } from "@google/genai";
 
 dotenv.config();
+// Database Configuration
+const db= new pg.Client(
+    {
+        user:"postgres",
+        host:"localhost",
+        database:"captions",
+        port:process.env.dbport,
+        password:process.env.dbpass
+    }
+);
+db.connect();
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -19,6 +31,7 @@ app.get("/", async (req, res) => {
     res.render("index.ejs");
 });
 
+//post Route
 app.post("/caption", async (req,res)=>
 {
 
