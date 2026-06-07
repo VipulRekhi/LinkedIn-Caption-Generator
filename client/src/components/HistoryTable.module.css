@@ -1,0 +1,134 @@
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  margin-bottom: 48px;
+  overflow: hidden;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.table thead tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.table th {
+  text-align: left;
+  padding: 16px 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--secondary-text);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: #fafbfc;
+}
+
+.table td {
+  padding: 20px;
+  font-size: 0.875rem;
+  color: var(--text);
+  vertical-align: top;
+  border-bottom: 1px solid var(--border);
+  line-height: 1.5;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table tbody tr:hover {
+  background: #fafbfc;
+}
+
+.colIndex {
+  width: 5%;
+}
+
+.colPrompt {
+  width: 20%;
+  font-weight: 500;
+}
+
+.colCaption {
+  width: 50%;
+  color: var(--secondary-text);
+}
+
+.colDate {
+  width: 15%;
+  color: var(--secondary-text);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.colAction {
+  width: 10%;
+  text-align: center;
+}
+
+.readMore {
+  display: inline;
+  margin-left: 6px;
+  color: var(--primary-blue);
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.readMore:hover {
+  text-decoration: underline;
+}
+
+.copyBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--secondary-text);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.copyBtn:hover {
+  border-color: #cbd5e1;
+  color: var(--text);
+}
+
+.copyBtn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.empty {
+  text-align: center;
+  color: var(--secondary-text);
+  padding: 48px 20px !important;
+}
+
+.loadingText {
+  text-align: center;
+  color: var(--secondary-text);
+  padding: 48px 20px;
+}
+
+@media (max-width: 768px) {
+  .table {
+    min-width: 720px;
+  }
+}

@@ -1,0 +1,44 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0 16px;
+  height: 44px;
+  min-width: 240px;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.wrap:focus-within {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(10, 102, 194, 0.1);
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  color: var(--secondary-text);
+  flex-shrink: 0;
+}
+
+.input {
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  color: var(--text);
+  width: 100%;
+  background: transparent;
+}
+
+.input::placeholder {
+  color: #94a3b8;
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    width: 100%;
+  }
+}

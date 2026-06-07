@@ -1,0 +1,149 @@
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.iconWrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: var(--primary-blue);
+}
+
+.title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--secondary-text);
+}
+
+.textareaWrap {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 160px;
+  padding: 16px 16px 36px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  color: var(--text);
+  resize: none;
+  overflow: hidden;
+  line-height: 1.6;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: var(--card-bg);
+}
+
+.textarea::placeholder {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(10, 102, 194, 0.12);
+}
+
+.textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.counter {
+  position: absolute;
+  bottom: 12px;
+  left: 16px;
+  font-size: 0.75rem;
+  color: var(--secondary-text);
+}
+
+.generateBtn {
+  width: 100%;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(90deg, #0a66c2, #004182);
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  margin-bottom: 12px;
+  box-shadow: 0 4px 14px rgba(10, 102, 194, 0.35);
+  transition: box-shadow 0.2s;
+}
+
+.generateBtn:hover:not(:disabled) {
+  box-shadow: 0 6px 20px rgba(10, 102, 194, 0.45);
+}
+
+.generateBtn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btnIcon {
+  width: 22px;
+  height: 22px;
+}
+
+.historyBtn {
+  width: 100%;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text);
+  transition: border-color 0.2s;
+}
+
+.historyBtn:hover {
+  border-color: #cbd5e1;
+}
+
+.historyIcon {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 24px 20px;
+  }
+}

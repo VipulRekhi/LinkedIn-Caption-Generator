@@ -1,0 +1,23 @@
+.toast {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--text);
+  color: white;
+  padding: 14px 24px;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 2000;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .toast {
+    white-space: normal;
+    text-align: center;
+    max-width: calc(100% - 32px);
+  }
+}

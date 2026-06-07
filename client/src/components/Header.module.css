@@ -1,0 +1,85 @@
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  gap: 24px;
+}
+
+.header.compact {
+  margin-bottom: 32px;
+}
+
+.brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  background: var(--primary-blue);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.logoText {
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.5px;
+}
+
+.brandText {
+  padding-top: 2px;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+
+.titleDark {
+  color: var(--text);
+}
+
+.titleBlue {
+  color: var(--primary-blue);
+}
+
+.subtitle {
+  color: var(--secondary-text);
+  font-size: 1rem;
+  max-width: 420px;
+}
+
+.doodle {
+  width: 120px;
+  height: 80px;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+
+  .doodle {
+    align-self: flex-end;
+    width: 100px;
+    height: 66px;
+  }
+
+  .title {
+    font-size: 1.35rem;
+  }
+}
