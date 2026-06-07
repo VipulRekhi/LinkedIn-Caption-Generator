@@ -1,0 +1,26 @@
+{
+  "name": "linkedin-caption-generator",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/VipulRekhi/LinkedIn-Caption-Generator#readme",
+  "bugs": {
+    "url": "https://github.com/VipulRekhi/LinkedIn-Caption-Generator/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VipulRekhi/LinkedIn-Caption-Generator.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@google/genai": "^2.8.0",
+    "axios": "^1.17.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}
