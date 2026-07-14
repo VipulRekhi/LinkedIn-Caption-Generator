@@ -4,16 +4,26 @@ import dotenv from "dotenv";
 import pg from "pg";
 import { GoogleGenAI } from "@google/genai";
 
+const { Pool } = pg;
+
 dotenv.config();
 
-const db = new pg.Client({
-    user: "postgres",
-    host: "localhost",
-    database: "captions",
-    port: process.env.dbport,
-    password: process.env.dbpass,
-});
-db.connect();
+const dbConfig = process.env.DATABASE_URL
+    ? {
+          connectionString: process.env.DATABASE_URL,
+          ssl: {
+              rejectUnauthorized: false,
+          },
+      }
+    : {
+          user: "postgres",
+          host: "localhost",
+          database: "captions",
+          port: process.env.dbport || 5432,
+          password: process.env.dbpass,
+      };
+
+const db = new Pool(dbConfig);
 
 const app = express();
 app.use(cors());
@@ -81,6 +91,10 @@ app.get("/history", async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
-});
+if (process.env.NODE_ENV !== "production") {
+    app.listen(port, () => {
+        console.log(`Server running on port ${port}`);
+    });
+}
+
+export default app;
